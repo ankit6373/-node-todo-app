@@ -8,24 +8,24 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',(err,db) =>{
 	
 	
 	const database = db.db('Todos')
-	/*
+	
 	database.collection('Todos').insertOne({
-		text: 'Something to do',
-        comepleted: false		
+		text: 'Eat Lunch',
+        comepleted: true		
 	},(err,result) =>{
 		if(err){
 			return console.log('Unable to insert todo',err);
 		}
 		console.log(JSON.stringify(result.ops));
 	});
-	*/
+	
 	
 	//Insert new doc into Users (name,age,location)
 	
 	database.collection('Users').insertOne({
-		name: 'Ankit',
-		age : 24,
-		location: 'chandigarh'
+		name: 'Priya',
+		age : 20,
+		location: 'jalandhar'
 	},(err,result) =>{
 		if(err){
 			return console.log('Unable to insert todo',err);
